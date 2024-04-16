@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Signup</title>
+	<link rel="stylesheet" type="text/css" href="/customerSignUp.css">
+</head>
+<body>
+	
+    <h2>Customer Signup</h2>
+    <form action="#" th:action="@{/signup}" th:object="${customer}" method="post">
+        <label>Name:</label><br>
+        <input type="text" th:field="*{name}" required><br>
+        
+        <label>Email:</label><br>
+        <input type="email" th:field="*{emailAddress}" required><br>
+        
+        <label>Age:</label><br>
+        <input type="number" th:field="*{age}" required><br>
+        
+        <label>Address:</label><br>
+        <input type="text" th:field="*{address}" required><br>
+        
+        <label>Contact Details:</label><br>
+        <input type="text" th:field="*{contactDetails}" required><br>
+        
+        <label>Password:</label><br>
+        <input type="password" th:field="*{password}" required><br>
+        
+        <label>Confirm Password:</label><br>
+        <input type="password" th:field="*{confirmPassword}" required><br>
+        
+        <button type="submit"><a th:href="@{/logIn}" class="btn btn-primary btn-sm mb-3"> </a>Sign Up</button>
+        
+        <p><a th:href="@{/LogInForCurrentUser1}" > already have an account? </a></p>	
+		
+		<div>
+			
+			
+		</div>
+    </form>
+
+</body>
+</html>

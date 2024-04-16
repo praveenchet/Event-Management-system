@@ -1,0 +1,31 @@
+<!-- venueSelectionForm.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Venue List</title>
+</head>
+<body>
+    <h1>Select Venue </h1>
+    <a  th:href="@{/venues/showVenueList}" th:object="${venues}" ></a>
+    <ul>
+    
+        <li th:each="venue : ${venues}">
+           
+                <!--  <input type="hidden" name="venueId" th:value="${venue.venueId}">-->
+                
+               
+                    -<span th:text="${venue.name}"></span>
+                     -<span th:text="${venue.address}"></span>
+                     -<span th:text="${venue.maxCapacity}"></span>
+                    -<span th:text="${venue.description}"></span>
+                    -<span th:text="${venue.category}"></span>
+                    -<span th:text="${venue.contactInfo}"></span>
+                    -<span th:text="${venue.venuecost}"></span>    
+            
+           
+        </li>
+    </ul>
+     <button type="submit"><a th:href="@{/selectVenue}" class="btn btn-primary btn-sm mb-3"> </a>Save and Next</button>
+</body>
+</html>

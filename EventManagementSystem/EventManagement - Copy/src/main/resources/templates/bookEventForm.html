@@ -1,0 +1,26 @@
+<!-- bookEventForm.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Event</title>
+     <link rel="stylesheet" type="text/css" href="/bookEventForm.css">
+</head>
+<body>
+    <h2>Book Event</h2>
+    <div class="container">
+    <form action="#" th:action="@{/add}" th:object="${events}" method="post">
+        <p>Name: <input type="text" th:field="*{name}"></p>
+        <p>Type: <input type="text" th:field="*{type}"></p>
+        <p>Event Date: <input type="text" th:field="*{eventDate}"></p>
+        <p>Number of Guests: <input type="number" th:field="*{guests}"></p>
+        <p>Starting Time: <input type="text" th:field="*{startingTime}"></p>
+        <p>Ending Time: <input type="text" th:field="*{endingTime}"></p>
+        
+        <button type="submit"><a th:href="@{/showVenueList}" class="btn btn-primary btn-sm mb-3"> </a>Save and Next</button>
+        
+    </form>
+    </div>
+</body>
+</html>
